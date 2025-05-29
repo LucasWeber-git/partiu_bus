@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:partiu_bus/widgets/map_widget.dart';
+import 'package:partiu_bus/widgets/route_widget.dart';
 
 class MyHomePage extends StatelessWidget {
   const MyHomePage({super.key, required this.title});
@@ -10,10 +10,11 @@ class MyHomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-        title: Text(title),
+        backgroundColor: Theme.of(context).colorScheme.primary,
+        title: Text(title, style: TextStyle(color: Colors.white)),
+        elevation: 2,
       ),
-      body: Center(child: MapWidget()),
+      body: Center(child: RouteWidget()),
     );
   }
 }
